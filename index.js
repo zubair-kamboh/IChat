@@ -8,7 +8,7 @@ const { saveUser, userLeave } = require('./utils/user')
 const io = new Server(server)
 
 // serving client
-app.use('/public', express.static('public'))
+app.use('/', express.static('public'))
 
 io.on('connection', (socket) => {
   // save user & send user info
