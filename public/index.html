@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter Chats</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to right, #2a0845, #6441a5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .form {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .input {
+        border: none;
+        outline: none;
+        padding: 10px 14px;
+        font-size: 19px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+      .button {
+        padding: 8px 12px;
+        font-size: 19px;
+        outline: none;
+        border-radius: 10px;
+        border: none;
+        background-color: #6441a5;
+        color: #fff;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="form" action="chat.html" method="get">
+      <input
+        type="text"
+        placeholder="Enter your name"
+        name="name"
+        class="input"
+      />
+      <input class="button" name="submit" type="submit" value="Submit" />
+    </form>
+
+    <script>
+      const form = document.querySelector('.form')
+      const input = document.querySelector('.input')
+
+      form.addEventListener('submit', (e) => {
+        if (!input.value) {
+          e.preventDefault()
+        }
+      })
+
+      // auto focus input
+      input.focus()
+      input.select()
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    />
+    <title>IChat</title>
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <body>
+      <div class="container">
+        <div class="row">
+          <nav class="menu">
+            <ul class="items">
+              <li class="item home-button">
+                <i class="fa fa-home" aria-hidden="true"></i>
+              </li>
+
+              <li class="item item-active">
+                <i class="fa fa-commenting" aria-hidden="true"></i>
+              </li>
+            </ul>
+          </nav>
+
+          <section class="discussions">
+            <div class="discussion search"></div>
+            <div class="online-users"></div>
+          </section>
+
+          <section class="chat" style="position: relative">
+            <div class="chat-area"></div>
+
+            <div class="chat-icon">
+              <img
+                src="./icons8-chat-room-64 (1).png"
+                style="
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                "
+                width="100"
+                alt=""
+              />
+            </div>
+          </section>
+        </div>
+      </div>
+    </body>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="client.js"></script>
+  </body>
+</html>
