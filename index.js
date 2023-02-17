@@ -7,6 +7,9 @@ const { Server } = require('socket.io')
 const { saveMessage } = require('./utils/message')
 const { saveUser, userLeave } = require('./utils/user')
 const io = new Server(server)
+const cors = require('cors')
+
+app.use(cors())
 
 // serving client
 app.use('/', express.static('./public'))
