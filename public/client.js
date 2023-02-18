@@ -1,7 +1,7 @@
 import { listMyself, listUsers, chatAreaHtml } from './utils.js'
 
 const fetchdata = async () => {
-  const res = await fetch('/api')
+  const res = await fetch('https://i-chat-yj44.vercel.app/api')
   const data = await res.json()
   console.log(data)
 }
