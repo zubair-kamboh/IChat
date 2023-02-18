@@ -12,7 +12,7 @@ const cors = require('cors')
 app.use(cors())
 
 // serving client
-app.use('/', express.static('./public'))
+app.use('/public', express.static('./public'))
 
 io.on('connection', (socket) => {
   // save user & send user info
