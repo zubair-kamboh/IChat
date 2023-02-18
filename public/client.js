@@ -1,5 +1,11 @@
 import { listMyself, listUsers, chatAreaHtml } from './utils.js'
 
+const fetchdata = async () => {
+  const res = await fetch('/api')
+  const data = await res.json()
+  console.log(data)
+}
+fetchdata()
 const onlineUsers = document.querySelector('.online-users')
 const yourself = document.querySelector('.search')
 const chat = document.querySelector('.chat')

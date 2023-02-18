@@ -58,5 +58,12 @@ io.use((socket, next) => {
   next()
 })
 
+app.get('/api', (req, res) => {
+  res.send({
+    name: 'zubair',
+    age: 20,
+  })
+})
+
 const port = process.env.PORT || 3000
 server.listen(port, () => console.log(`listening on ${port}`))
