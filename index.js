@@ -12,7 +12,7 @@ const cors = require('cors')
 app.use(cors())
 
 // serving client
-app.use('/public', express.static('./public'))
+app.use('/', express.static('public'))
 
 io.on('connection', (socket) => {
   // save user & send user info
@@ -56,13 +56,6 @@ io.use((socket, next) => {
 
   socket.usernames = username
   next()
-})
-
-app.get('/api', (req, res) => {
-  res.send({
-    name: 'zubair',
-    age: 20,
-  })
 })
 
 const port = process.env.PORT || 3000
